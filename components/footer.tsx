@@ -1,19 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Globe, Mail, Phone, Instagram, Twitter, Linkedin, Github } from "lucide-react"
-import { useLanguage } from "@/contexts/language-context"
+import Link from "next/link";
+import { Globe, Mail, Phone, Instagram, Twitter, Linkedin, Github } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function Footer() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-gray-900 py-16 px-8 border-t border-blue-900/20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-4">
-          <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
-            Fushiguro Megumi
-          </h3>
+          <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">Fushiguro ass</h3>
           <p className="text-blue-100/70">{t("heroSubtitle")}</p>
           <div className="flex space-x-4">
             <a href="#" className="text-blue-100/70 hover:text-blue-400 transition-colors">
@@ -106,5 +104,5 @@ export default function Footer() {
         © {new Date().getFullYear()} Fushiguro Megumi. {t("allRightsReserved")}
       </div>
     </footer>
-  )
+  );
 }
