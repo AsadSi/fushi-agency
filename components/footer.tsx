@@ -80,24 +80,6 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-white">{t("contact")}</h4>
-          <ul className="space-y-2">
-            <li className="flex items-center gap-2 text-blue-100/70">
-              <Mail size={16} />
-              <span>info@fushiguro.com</span>
-            </li>
-            <li className="flex items-center gap-2 text-blue-100/70">
-              <Phone size={16} />
-              <span>+1 (123) 456-7890</span>
-            </li>
-            <li className="flex items-center gap-2 text-blue-100/70">
-              <Globe size={16} />
-              <span>123 Digital Street, Tokyo, Japan</span>
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-blue-900/20 text-center text-blue-100/50 text-sm">
