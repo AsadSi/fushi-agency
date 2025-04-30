@@ -26,7 +26,7 @@ export default function NavBar() {
               <div className="w-4 h-4 rounded-full border-2 border-white"></div>
             </div>
           </div>
-          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-300">Fushiguro fagg</span>
+          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-300">Fushiguro Megumi</span>
         </Link>
 
         {/* Desktop Navigation */}
