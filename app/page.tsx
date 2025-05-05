@@ -46,24 +46,14 @@ const services = [
 
 const partners = [
   {
-    name: "WeCircle.io",
-    logo: "/placeholder.svg?height=80&width=200",
-    url: "https://example.com",
+    name: "WeCircle",
+    logo: "https://wecircle.io/wp-content/uploads/2021/12/WeCircle-Logo.png",
+    url: "http://wecircle.io",
   },
   {
-    name: "NSSA.dk",
-    logo: "/placeholder.svg?height=80&width=200",
-    url: "https://example.com",
-  },
-  {
-    name: "TechCorp",
-    logo: "/placeholder.svg?height=80&width=200",
-    url: "https://example.com",
-  },
-  {
-    name: "DigitalBrand",
-    logo: "/placeholder.svg?height=80&width=200",
-    url: "https://example.com",
+    name: "NSSA",
+    logo: "https://usercontent.one/wp/www.nssa.dk/wp-content/uploads/2023/03/Design-uden-navn-2-1-e1679697914217.png?media=1729086309",
+    url: "http://nssa.dk",
   },
 ]
 
@@ -407,9 +397,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Work Section */}
+      {/* Work Section
       <section id="work" className="py-32 px-8 bg-gray-900 relative overflow-hidden">
-        {/* Background elements */}
+        {/* Background elements
         <motion.div
           className="absolute top-40 right-20 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl"
           animate={{
@@ -482,6 +472,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      */}
+
 
       {/* Partners Section */}
       <section id="partners" className="py-32 px-8 bg-gray-950">
