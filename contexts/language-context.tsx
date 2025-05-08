@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 
 // Define our translations
 export const translations = {
   en: {
     // Navigation
-    services: "Services",
+    servicesNav: "Services",
     work: "Work",
     process: "Process",
     about: "About",
@@ -17,6 +17,7 @@ export const translations = {
     heroTitle2: "Megumi",
     heroSubtitle: "Building digital experiences with the same calm precision it takes to control an infinite space.",
     contactUs: "Contact Us",
+    getAnOffer: "Get an Offer",
     ourServices: "Our Services",
 
     // Services
@@ -38,14 +39,11 @@ export const translations = {
     customDesign: "Custom Design",
     customDesignDesc: "Tailored designs that perfectly match your specific needs, brand identity, and business goals.",
     maintenance: "Maintenance & Support",
-    maintenanceDesc:
-      "Ongoing support and maintenance to keep your digital assets secure, updated, and performing optimally.",
+    maintenanceDesc: "Ongoing support and maintenance to keep your digital assets secure, updated, and performing optimally.",
     modernSolutions: "Modern & Fast",
-    modernSolutionsDesc:
-      "We deliver optimized, lightning-fast solutions using cutting-edge technologies for maximum performance.",
+    modernSolutionsDesc: "We deliver optimized, lightning-fast solutions using cutting-edge technologies for maximum performance.",
     freeHosting: "Free Hosting & SSL",
-    freeHostingDesc:
-      "Every project includes free hosting and SSL certificates to keep your website secure and accessible.",
+    freeHostingDesc: "Every project includes free hosting and SSL certificates to keep your website secure and accessible.",
 
     // Work
     workTitle: "Our",
@@ -81,14 +79,10 @@ export const translations = {
     aboutHighlight: "Fushiguro Megumi",
     aboutSubtitle: "Clear thinking. Focused execution. Digital solutions that move with you, without limits.",
     innovationTitle: "Innovation Without Limits",
-    aboutP1:
-      "We take on every project with a simple idea: no challenge is too big when approached the right way. We combine smart planning and bold creativity to build solutions that are made to grow, adapt, and lead.",
-    aboutP2:
-      "Our work is designed to fit your goals perfectly — with the flexibility to evolve as you do. We stay sharp, focused, and ready to move, just like the endless flow of ideas that drive true innovation.",
-    aboutP3:
-      "With deep research, clear thinking, and a creative edge, we don't just solve problems — we spot new opportunities others miss. Every decision is made with precision, every design with intent.",
-    aboutP4:
-      "In a world that's always moving, we believe in creating solutions that feel limitless — no shortcuts, no compromises. Just forward momentum, tailored to you.",
+    aboutP1: "We take on every project with a simple idea: no challenge is too big when approached the right way.",
+    aboutP2: "Our work is designed to fit your goals perfectly — with the flexibility to evolve as you do.",
+    aboutP3: "We don't just solve problems — we spot new opportunities others miss.",
+    aboutP4: "In a world that's always moving, we create solutions that feel limitless — no shortcuts, no compromises.",
 
     // CTA
     ctaTitle: "Ready to",
@@ -109,16 +103,101 @@ export const translations = {
 
     // Footer
     services: "Services",
-    company: "Company",
     aboutUs: "About Us",
     ourWork: "Our Work",
     careers: "Careers",
     privacyPolicy: "Privacy Policy",
     allRightsReserved: "All rights reserved.",
+
+    // UI Elements
+    thankYou: "Thank you",
+    formSubmittedLong: "Your form has been submitted successfully. We will get back to you shortly.",
+    close: "Close",
+
+    // Form page labels
+    name: "Name",
+    email: "Email",
+    phone: "Phone",
+    facebookAccount: "Facebook Account",
+    company: "Company",
+    projectType: "Project Type",
+    pagesEstimate: "Pages Estimate",
+    features: "Features",
+    designStyle: "Design Style",
+    designStyleOption1: "Minimalist",
+    designStyleOption2: "Modern",
+    designStyleOption3: "Corporate",
+    designStyleOption4: "Playful",
+    designStyleOption5: "Luxury",
+    designStyleOption6: "Retro",
+    colorScheme: "Color Scheme",
+    inspiration: "Inspiration",
+    timeline: "Timeline",
+    budget: "Budget",
+    additionalInfo: "Additional Info",
+
+    // Option labels
+    newWebsite: "New Website",
+    redesign: "Redesign",
+    other: "Other",
+
+    needHelpWithDesign: "I need help with design",
+    otherProjectType: "Other Project Type",
+    existingWebsite: "Existing Website",
+    title: "Website Project Questionnaire",
+    requiredFields: "Fields marked with * are required",
+
+    // Placeholders & tooltips
+    nameTooltip: "Your full name",
+    emailTooltip: "We'll contact you via email if provided",
+    phoneTooltip: "We'll contact you via phone if provided",
+    facebookAccountTooltip: "Your Facebook profile link",
+    projectTypeTooltip: "What kind of website do you need?",
+    featuresToolTip: "Let us know any specific features you want",
+    designStyleTooltip: "Choose a style or let us help you decide",
+    timelineTooltip: "How soon do you need the project done?",
+    budgetTooltip: "What’s your estimated budget?",
+    contactMethodRequired: "Please provide at least one way to contact you",
+
+    designStylePlaceholder: "Choose a design style",
+    existingWebsitePlaceholder: "https://your-old-site.com",
+    otherProjectTypePlaceholder: "e.g., Web app for internal use",
+    featuresPlaceholder: "Login, contact form, animations...",
+    inspirationPlaceholder: "Link or describe design examples you like",
+    timelinePlaceholder: "e.g., 4 weeks, 2 months",
+    colorSchemePlaceholder: "e.g., Black and gold, pastel tones",
+    additionalInfoPlaceholder: "Anything else we should know?",
+
+    // Validation & notifications
+    formSubmittedTitle: "Form Submitted",
+    formSubmittedDesc: "Thanks! We've received your form and will be in touch shortly.",
+    errorSubmittingTitle: "Something went wrong",
+    errorSubmittingDesc: "There was an error while submitting your form. Please try again.",
+    validationErrorTitle: "Validation Error",
+    validationErrorDesc: "Some fields need your attention. Please review the errors.",
+    missingFieldsTitle: "Missing Required Fields",
+    missingFieldsDesc: "Please fill out all required fields before continuing.",
+    submitting: "Submitting...",
+    submit: "Submit",
+    previous: "Previous",
+    next: "Next",
+
+    // Zod error messages
+    "Name must be at least 2 characters": "Name must be at least 2 characters",
+    "Invalid email address": "Invalid email address",
+    "Invalid phone number": "Invalid phone number",
+    "Facebook account must be at least 3 characters": "Facebook account must be at least 3 characters",
+    "Project type is required": "Project type is required",
+    "Please provide the existing website URL": "Please provide the existing website URL",
+    "Please specify the project type": "Please specify the project type",
+    "Please select a design style or check 'I need help with design'": "Please select a design style or check 'I need help with design'",
+    "Timeline is required": "Timeline is required",
+    "Budget is required": "Budget is required",
   },
+
   da: {
     // Navigation
-    services: "Ydelser",
+    servicesNav: "Ydelser",
     work: "Arbejde",
     process: "Proces",
     about: "Om os",
@@ -127,19 +206,23 @@ export const translations = {
     // Hero
     heroTitle1: "Fushiguro",
     heroTitle2: "Megumi",
-    heroSubtitle:
-      "Vi bygger digitale oplevelser med samme rolige præcision, det kræver at kontrollere et uendeligt rum.",
+    heroSubtitle: "Vi bygger digitale oplevelser med samme rolige præcision, det kræver at kontrollere et uendeligt rum.",
     contactUs: "Kontakt os",
+    getAnOffer: "Få et tilbud",
     ourServices: "Vores ydelser",
+
+    needHelpWithDesign: "Jeg har brug for hjælp til designet",
+    otherProjectType: "Anden projekttype",
+    existingWebsite: "Eksisterende hjemmeside",
+    title: "Spørgeskema til hjemmesideprojekt",
+    requiredFields: "Felter markeret med * er obligatoriske",
 
     // Services
     expertiseTitle: "Fokuseret",
     expertiseHighlight: "Ekspertise",
-    expertiseSubtitle:
-      "Vi bringer smarte idéer og skarp udførelse sammen for at hjælpe dig med at vokse, uden grænser.",
+    expertiseSubtitle: "Vi bringer smarte idéer og skarp udførelse sammen for at hjælpe dig med at vokse, uden grænser.",
     webSolutions: "Webløsninger",
-    webSolutionsDesc:
-      "Skræddersyede hjemmesider bygget til at tilpasse, imponere og præstere — uanset hvad der kommer din vej.",
+    webSolutionsDesc: "Skræddersyede hjemmesider bygget til at tilpasse, imponere og præstere — uanset hvad der kommer din vej.",
     mobileApps: "Mobil-apps",
     mobileAppsDesc: "Højtydende mobile apps designet til iOS og Android — hurtige, pålidelige og smidige.",
     uiUx: "UI/UX",
@@ -149,25 +232,26 @@ export const translations = {
     seo: "SEO-optimering",
     seoDesc: "Boost din synlighed med vores ekspert SEO-strategier, der driver organisk trafik og forbedrer rangering.",
     ecommerce: "E-handelsløsninger",
-    ecommerceDesc:
-      "Kraftfulde online butikker med problemfri checkout-oplevelser, der konverterer besøgende til kunder.",
+    ecommerceDesc: "Kraftfulde online butikker med problemfri checkout-oplevelser, der konverterer besøgende til kunder.",
     customDesign: "Skræddersyet Design",
-    customDesignDesc:
-      "Skræddersyede designs, der perfekt matcher dine specifikke behov, brandidentitet og forretningsmål.",
+    customDesignDesc: "Skræddersyede designs, der perfekt matcher dine specifikke behov, brandidentitet og forretningsmål.",
     maintenance: "Vedligeholdelse & Support",
-    maintenanceDesc:
-      "Løbende support og vedligeholdelse for at holde dine digitale aktiver sikre, opdaterede og optimalt ydende.",
+    maintenanceDesc: "Løbende support og vedligeholdelse for at holde dine digitale aktiver sikre, opdaterede og optimalt ydende.",
     modernSolutions: "Moderne & Hurtig",
-    modernSolutionsDesc:
-      "Vi leverer optimerede, lynhurtige løsninger ved hjælp af banebrydende teknologier for maksimal ydeevne.",
+    modernSolutionsDesc: "Vi leverer optimerede, lynhurtige løsninger ved hjælp af banebrydende teknologier for maksimal ydeevne.",
     freeHosting: "Gratis Hosting & SSL",
-    freeHostingDesc:
-      "Hvert projekt inkluderer gratis hosting og SSL-certifikater for at holde din hjemmeside sikker og tilgængelig.",
+    freeHostingDesc: "Hvert projekt inkluderer gratis hosting og SSL-certifikater for at holde din hjemmeside sikker og tilgængelig.",
 
     // Work
     workTitle: "Vores",
     workHighlight: "Arbejde",
     workSubtitle: "Se nogle af vores prisvindende projekter, der har hjulpet virksomheder med at vokse.",
+    designStyleOption1: "Minimalistisk",
+    designStyleOption2: "Moderne",
+    designStyleOption3: "Corporate",
+    designStyleOption4: "Legesyg",
+    designStyleOption5: "Luksus",
+    designStyleOption6: "Retro",
 
     // Partners
     partnersTitle: "Vores betroede partnere",
@@ -198,14 +282,10 @@ export const translations = {
     aboutHighlight: "Fushiguro Megumi",
     aboutSubtitle: "Klar tænkning. Fokuseret udførelse. Digitale løsninger, der bevæger sig med dig, uden grænser.",
     innovationTitle: "Innovation uden grænser",
-    aboutP1:
-      "Vi tager fat på hvert projekt med en enkel idé: ingen udfordring er for stor, når den tilgås på den rigtige måde. Vi kombinerer smart planlægning og dristig kreativitet for at bygge løsninger, der er skabt til at vokse, tilpasse sig og lede.",
-    aboutP2:
-      "Vores arbejde er designet til at passe perfekt til dine mål — med fleksibiliteten til at udvikle sig, som du gør. Vi forbliver skarpe, fokuserede og klar til at bevæge os, ligesom den endeløse strøm af ideer, der driver sand innovation.",
-    aboutP3:
-      "Med dyb forskning, klar tænkning og en kreativ kant løser vi ikke bare problemer — vi opdager nye muligheder, som andre overser. Hver beslutning træffes med præcision, hvert design med hensigt.",
-    aboutP4:
-      "I en verden, der altid bevæger sig, tror vi på at skabe løsninger, der føles grænseløse — ingen genveje, ingen kompromiser. Bare fremadrettet momentum, skræddersyet til dig.",
+    aboutP1: "Vi tager fat på hvert projekt med en enkel idé: ingen udfordring er for stor, når den tilgås på den rigtige måde.",
+    aboutP2: "Vores arbejde er designet til at passe perfekt til dine mål — med fleksibiliteten til at udvikle sig, som du gør.",
+    aboutP3: "Vi opdager nye muligheder, som andre overser — ikke bare løser problemer.",
+    aboutP4: "I en verden, der altid bevæger sig, skaber vi løsninger uden grænser — ingen genveje, ingen kompromiser.",
 
     // CTA
     ctaTitle: "Klar til at",
@@ -216,8 +296,7 @@ export const translations = {
     // Contact
     contactTitle: "Kom i",
     contactHighlight: "Kontakt",
-    contactSubtitle:
-      "Klar til at starte dit næste projekt? Vi er her for at hjælpe med at gøre din vision til virkelighed.",
+    contactSubtitle: "Klar til at starte dit næste projekt? Vi er her for at hjælpe med at gøre din vision til virkelighed.",
     emailUs: "Email Os",
     callUs: "Ring Til Os",
     whatsappUs: "WhatsApp Os",
@@ -226,55 +305,127 @@ export const translations = {
     startWhatsapp: "Start WhatsApp Chat",
 
     // Footer
-    services: "Ydelser",
-    company: "Virksomhed",
+    services: "Services",
     aboutUs: "Om os",
     ourWork: "Vores arbejde",
     careers: "Karriere",
     privacyPolicy: "Privatlivspolitik",
     allRightsReserved: "Alle rettigheder forbeholdes.",
-  },
-}
 
-type Language = "en" | "da"
-type TranslationKey = keyof typeof translations.en
+    // UI Elements
+    thankYou: "Tak",
+    formSubmittedLong: "Din formular er sendt. Vi vender tilbage til dig snart.",
+    close: "Luk",
+
+    // Form page labels
+    name: "Navn",
+    email: "Email",
+    phone: "Telefon",
+    facebookAccount: "Facebook-konto",
+    company: "Firma",
+    projectType: "Projekttype",
+    pagesEstimate: "Sideantal",
+    features: "Funktioner",
+    designStyle: "Designstil",
+    colorScheme: "Farveskema",
+    inspiration: "Inspiration",
+    timeline: "Tidslinje",
+    budget: "Budget",
+    additionalInfo: "Yderligere info",
+
+    // Option labels
+    newWebsite: "Ny hjemmeside",
+    redesign: "Redesign",
+    other: "Andet",
+
+    // Placeholders & tooltips
+    nameTooltip: "Dit fulde navn",
+    emailTooltip: "Vi kontakter dig via e-mail, hvis oplyst",
+    phoneTooltip: "Vi kontakter dig via telefon, hvis oplyst",
+    facebookAccountTooltip: "Link til din Facebook-profil",
+    projectTypeTooltip: "Hvilken slags hjemmeside har du brug for?",
+    featuresToolTip: "Fortæl os, hvilke funktioner du ønsker",
+    designStyleTooltip: "Vælg en stil, eller lad os hjælpe dig",
+    timelineTooltip: "Hvornår skal projektet være færdigt?",
+    budgetTooltip: "Hvad er dit budget?",
+    contactMethodRequired: "Angiv venligst mindst én kontaktmetode",
+
+    designStylePlaceholder: "Vælg en designstil",
+    existingWebsitePlaceholder: "https://din-nuværende-side.dk",
+    otherProjectTypePlaceholder: "f.eks. intern webapp",
+    featuresPlaceholder: "Login, kontaktformular, animationer…",
+    inspirationPlaceholder: "Link eller beskrivelse af design, du kan lide",
+    timelinePlaceholder: "f.eks. 4 uger, 2 måneder",
+    colorSchemePlaceholder: "f.eks. Sort og guld, pasteltoner",
+    additionalInfoPlaceholder: "Er der andet, vi skal vide?",
+
+    // Validation & notifications
+    formSubmittedTitle: "Formular sendt",
+    formSubmittedDesc: "Tak! Vi har modtaget din formular og kontakter dig snart.",
+    errorSubmittingTitle: "Noget gik galt",
+    errorSubmittingDesc: "Der opstod en fejl under indsendelsen. Prøv igen.",
+    validationErrorTitle: "Valideringsfejl",
+    validationErrorDesc: "Nogle felter kræver din opmærksomhed. Tjek venligst fejlene.",
+    missingFieldsTitle: "Manglende obligatoriske felter",
+    missingFieldsDesc: "Udfyld venligst alle obligatoriske felter, før du fortsætter.",
+    submitting: "Indsender...",
+    submit: "Indsend",
+    previous: "Forrige",
+    next: "Næste",
+
+    // Zod error messages
+    "Name must be at least 2 characters": "Navn skal være mindst 2 tegn langt",
+    "Invalid email address": "Ugyldig e-mailadresse",
+    "Invalid phone number": "Ugyldigt telefonnummer",
+    "Facebook account must be at least 3 characters": "Facebook-konto skal være mindst 3 tegn langt",
+    "Project type is required": "Projekttype er obligatorisk",
+    "Please provide the existing website URL": "Angiv venligst den eksisterende hjemmesides URL",
+    "Please specify the project type": "Angiv venligst projekttypen",
+    "Please select a design style or check 'I need help with design'": "Vælg en designstil eller marker 'Jeg har brug for hjælp til designet'",
+    "Timeline is required": "Tidslinje er obligatorisk",
+    "Budget is required": "Budget er obligatorisk",
+  },
+};
+
+type Language = "en" | "da";
+type TranslationKey = keyof typeof translations.en;
 
 interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
-  t: (key: TranslationKey) => string
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: TranslationKey) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   // Get initial language from localStorage if available, otherwise default to English
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window !== "undefined") {
-      const savedLanguage = localStorage.getItem("language") as Language
-      return savedLanguage || "en"
+      const savedLanguage = localStorage.getItem("language") as Language;
+      return savedLanguage || "en";
     }
-    return "en"
-  })
+    return "en";
+  });
 
   // Save language preference to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem("language", language)
-  }, [language])
+    localStorage.setItem("language", language);
+  }, [language]);
 
   // Translation function
   const t = (key: TranslationKey): string => {
-    return translations[language][key] || translations.en[key] || key
-  }
+    return (translations[language] as typeof translations.en)[key] || translations.en[key] || key;
+  };
 
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
+  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>;
 }
 
 // Custom hook to use the language context
 export function useLanguage() {
-  const context = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
-  return context
+  return context;
 }
